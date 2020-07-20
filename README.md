@@ -7,10 +7,17 @@ ________
 > * [jdk-8 x64](https://mega.nz/#!lgdHSAJB!YCLwj5De1pq7auhfCYNxfHQppqFRnz13JjKxPHln2pQ)
 > * [State Farm® 8.7.0 APKs ](https://apkplz.net/download-app/com.statefarm.pocketagent)
 > * [Split APKs Installer](https://apkplz.net/app/com.aefyr.sai)
+> * [Node.js](https://nodejs.org/dist/v12.18.2/node-v12.18.2-x64.msi)
+
+Установка Node.js:
+________
+
+> * [Подробнее по установке Node.js](https://zen.yandex.ru/media/id/5a16a1eee86a9e56a71cf8ef/kak-ustanovit-nodejs-i-npm-v-windows-5dc2915034808200b20fb55a?utm_source=serp)
+
 
 Установка Android studio:
 ________
-> * [Подробнее по установке можно почитать тут](https://lumpics.ru/install-android-studio-on-computer/)
+> * [Подробнее по установке Android studio](https://lumpics.ru/install-android-studio-on-computer/)
 
 
 Установка AVD Manager Android studio:
@@ -38,7 +45,7 @@ ________
 
     6. Указать имя в поле "AVD Name" "Pixel 3" нажать "Finish"
     
-![Download](https://i.ibb.co/tZx7xH2/2020-07-20-16-03-36.png)
+![ReName](https://i.ibb.co/tZx7xH2/2020-07-20-16-03-36.png)
 
 Эмулятор будет готов к использованию!
 
@@ -98,4 +105,97 @@ ________
 
     9. Далее принять измнеения "OK"
     
+Установка приложения на Эмулятор:
+________
 
+    1. Скачав Split APKs Installer по ссылке выше необходимо переименовать файл в "sai.apk"
+       Далее необходимо переместить файл в корень диска D:\ 
+       (или в корень любого диска но в дальнейшем использовать его.)
+       Путь к файлу должен быть "D:\sai.apk"
+       
+    2. Запустите эулятор (зеленый треугольник)
+    
+![Android studio](https://i.ibb.co/qd0fHkw/8.png)
+
+    3. После запуска эмулятора откройте коммандную строку (win + r) или "Поиск" -> cmd
+       В открывшемся окне введите комманду: "adb install D:\sai.apk" 
+       Начнется процесс установки приложения у вас должно получиться как на изображении ниже
+       
+![CMD](https://i.ibb.co/DfjksBW/2020-07-20-17-37-19.png)
+
+    4. Далее необходимо переименовать скачaнную по ссылке State Farm® 8.7.0 APKs папку в statefarm. 
+       И так же поместить ее в корень диска D:\
+       В открытом окне командной строки ввести комманду: "adb push D:\statefarm /storage/emulated/0/Download/statefarm"
+       У вас должен получится такой же результат как показан ниже.
+       
+![CMD](https://i.ibb.co/2j8HH1f/2020-07-20-17-49-14.png)
+
+    5. Открываем эмулятор и находим там приложение "SAI" (Синяя стрелка вниз)
+
+![Emulator](https://i.ibb.co/Fq62SD0/2020-07-20-17-51-30.png)
+
+    6. Открываем приложение "SAI" (Синяя стрелка вниз). Нажымаем "Install APKs"
+
+![Emulator](https://i.ibb.co/XtKTPXj/2020-07-20-17-52-00.png)
+
+    7. Находим и нажимаем на папку "Download"
+
+![Emulator](https://i.ibb.co/MN83Ckw/2020-07-20-17-52-48.png)
+
+    8. Если все сделали правильно в ней должна находиться папка "statefarm", открываем ее.
+
+![Emulator](https://i.ibb.co/X3kyWCk/2020-07-20-17-53-01.png)
+
+    9. Выбираем все файлы как показано на изображении ниже и нажимакм "Select" 
+
+![Emulator](https://i.ibb.co/r5SHZ2b/2020-07-20-17-53-55.png)
+
+    10. В появившемся предупреждении выбираем "Settings" 
+
+![Emulator](https://i.ibb.co/q5CDtrg/2020-07-20-17-54-12.png)
+
+    11. Устанавливаем переключатель как показанно на изображении ниже
+        Далее выходим (стрелка влево)
+
+![Emulator](https://i.ibb.co/RDWCyG0/2020-07-20-17-54-27.png)
+
+    12. В появившемся предупреждении нажимаем "Install"
+
+![Emulator](https://i.ibb.co/cL4HLm5/2020-07-20-17-54-37.png)
+
+    13. Через некоторое время появится логотип приложения State Farm
+
+![Emulator](https://i.ibb.co/Z6N2VYz/2020-07-20-17-55-17.png)
+
+Запуск теста:
+________
+
+    1. Необходимо что бы был включен эмулятор.
+    2. Необходимо запустить Appium.
+       В открывшемся окне нажать "Start Server ..."
+
+![Appium](https://i.ibb.co/4WTTvP9/2020-07-20-18-14-43.png)
+
+    Должен запуститься сервер
+    
+![Appium](https://i.ibb.co/Rhsy0KQ/2020-07-20-18-15-05.png)
+
+    3. В папке со скаченым проектом с github открыть командную строку
+       В командной строке должен быть указан адрес папки с прокетом.
+    
+![CMD](https://i.ibb.co/8bYt831/2020-07-20-18-19-44.png)
+ 
+     4. Вводим комманду: "npm install". Нажмите кнопку "Enter" и ачнется процесс установки.
+        Результат установки может немного отличаться от изображений ниже.
+     
+![CMD](https://i.ibb.co/PmVPqND/2020-07-20-18-20-33.png)     
+![CMD](https://i.ibb.co/jRVpgbG/2020-07-20-18-20-50.png)
+
+    5. После установки вводим комманду: "node test.js" Нажмите кнопку "Enter"
+       Далее запустится тест. Процесс наблюдайте в Емуляторе.
+       
+![CMD](https://i.ibb.co/QfwR2LR/2020-07-20-18-34-39.png)     
+![CMD](https://i.ibb.co/DktF7wc/2020-07-20-18-35-18.png)
+![CMD](https://i.ibb.co/nrb2Zs6/2020-07-20-18-35-43.png)
+
+    
