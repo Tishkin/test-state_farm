@@ -2,7 +2,7 @@
 ========
 Скачать:
 ________
-> * [Android studio](http://webdesign.ru.net)
+> * [Android studio](https://developer.android.com/studio/?gclid=Cj0KCQjwpNr4BRDYARIsAADIx9xpuEfJ1iSDV9ybBe0wSapPbtQRHT5782oNQsmpKb1_wwOoXll5oIsaAlUhEALw_wcB&gclsrc=aw.ds)
 > * [Appium](https://github.com/appium/appium-desktop/releases/download/v1.17.1-1/Appium-windows-1.17.1-1.exe)
 > * [jdk-8 x64](https://mega.nz/#!lgdHSAJB!YCLwj5De1pq7auhfCYNxfHQppqFRnz13JjKxPHln2pQ)
 > * [State Farm® 8.7.0 APKs ](https://apkplz.net/download-app/com.statefarm.pocketagent)
